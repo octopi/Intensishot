@@ -2,55 +2,69 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@drawable/backrepeat"
     android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:src="@drawable/logo_prod" android:paddingLeft="10dp" />
 
     <TextView
         android:id="@+id/countdownTimer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge" android:visibility="invisible" />
 
     <TextView
         android:id="@+id/xText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:text="TextView"  android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/yText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:text="TextView"  android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/zText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:text="TextView" android:visibility="invisible" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/button_label" />
-    
     <TextView
         android:id="@+id/xDiffText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:text="TextView" android:visibility="invisible" />
 
     <TextView
         android:id="@+id/yDiffText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:text="TextView" android:visibility="invisible" />
 
     <TextView
         android:id="@+id/zDiffText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:text="TextView" android:visibility="invisible" />
+    
+    <Button
+        android:id="@+id/button"
+        android:layout_height="wrap_content"
+        android:text="@string/button_label"
+        android:background="@drawable/brownbutton" style="@style/ButtonText" android:layout_width="wrap_content" android:layout_gravity="center_vertical|center_horizontal"/>
 
 </LinearLayout>
