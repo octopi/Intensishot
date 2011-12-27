@@ -34,5 +34,23 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_label" />
+    
+    <TextView
+        android:id="@+id/xDiffText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/yDiffText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/zDiffText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" android:gravity="center_horizontal"/>
 
 </LinearLayout>
