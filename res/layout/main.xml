@@ -5,21 +5,34 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/xText"
-        android:layout_width="wrap_content"
+        android:id="@+id/countdownTimer"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/xText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" android:gravity="center_horizontal"/>
 
     <TextView
         android:id="@+id/yText"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="TextView" android:gravity="center_horizontal"/>
 
     <TextView
         android:id="@+id/zText"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="TextView" android:gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_label" />
 
 </LinearLayout>

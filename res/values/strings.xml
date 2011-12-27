@@ -3,5 +3,6 @@
 
     <string name="hello">Hello World, IntensishotActivity!</string>
     <string name="app_name">Intensishot</string>
+    <string name="button_label">Start countdown</string>
 
 </resources>
