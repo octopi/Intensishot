@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <rotate android:id="@+id/rotator">
+            <bitmap android:src="@drawable/needle" android:gravity="center" android:id="@+id/needle"/>
+        </rotate>
+    </item>
+    <item android:drawable="@drawable/meter" />
+</layer-list>

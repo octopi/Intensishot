@@ -1,6 +1,7 @@
 package me.davidhu.intensishot;
 
 import android.app.Activity;
+import android.graphics.drawable.RotateDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -10,6 +11,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class IntensishotActivity extends Activity implements SensorEventListener {
@@ -26,6 +28,8 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 	private TextView xDiffText;
 	private TextView yDiffText;
 	private TextView zDiffText;
+	private ImageView meterImage;
+	private RotateDrawable rotator; 
 
 	private float[] zeroes; // original zeroed states of sensors
 	private float[] maxDiff; // max difference between zeroed and some observed state
@@ -53,6 +57,12 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 		mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
 		mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
+		meterImage = (ImageView) findViewById(R.id.meterImage);
+		meterImage.setImageDrawable(getResources().getDrawable(R.layout.meter));
+		
+		rotator = (RotateDrawable) getResources().getDrawable(R.drawable.needle);
+		rotator.setLevel(2);
+		
 		zeroes = null;
 		
 		endingTimer = null;

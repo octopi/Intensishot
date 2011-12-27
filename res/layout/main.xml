@@ -60,6 +60,11 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="TextView" android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/meterImage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
     
     <Button
         android:id="@+id/button"
