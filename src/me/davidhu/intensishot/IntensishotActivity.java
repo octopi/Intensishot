@@ -30,6 +30,7 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 	private TextView zDiffText;
 	private ImageView meterImage;
 	private RotateDrawable rotator; 
+	private Panel meterPanel;
 
 	private float[] zeroes; // original zeroed states of sensors
 	private float[] maxDiff; // max difference between zeroed and some observed state
@@ -63,6 +64,7 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 		rotator = (RotateDrawable) getResources().getDrawable(R.drawable.needle);
 		rotator.setLevel(2);*/
 		
+		meterPanel = (Panel) findViewById(R.id.meterPanel);
 		
 		
 		zeroes = null;
@@ -96,6 +98,8 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 				}.start();
 			}
 		});       
+		
+		startSensing();
 	}
 
 	private void startSensing() {
@@ -139,17 +143,22 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 			xText.setText("x: "+String.valueOf(xDiff));
 			yText.setText("y: "+String.valueOf(yDiff));
 			zText.setText("z: "+String.valueOf(zDiff));
+			
+			meterPanel.invalidate();
 
 			if(xDiff > maxDiff[0]) {
 				maxDiff[0] = xDiff;
+				meterPanel.setAngle(xDiff+yDiff+zDiff);
 				restartEndTimer();
 			}
 			if(yDiff > maxDiff[1]) {
 				maxDiff[1] = yDiff;
+				meterPanel.setAngle(xDiff+yDiff+zDiff);
 				restartEndTimer();
 			}
 			if(zDiff > maxDiff[2]) {
 				maxDiff[2] = zDiff;
+				meterPanel.setAngle(xDiff+yDiff+zDiff);
 				restartEndTimer();
 			}
 
@@ -175,7 +184,7 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 			
 			@Override
 			public void onFinish() {
-				stopSensing();
+				//stopSensing();
 				float score = maxDiff[0]+maxDiff[1]+maxDiff[2];
 				countdownTimer.setText("Done! Your score is: "+score);
 			}

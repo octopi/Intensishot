@@ -24,44 +24,45 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="TextView"  android:visibility="invisible"/>
+        android:text="TextView" />
 
     <TextView
         android:id="@+id/yText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="TextView"  android:visibility="invisible"/>
+        android:text="TextView" />
 
     <TextView
         android:id="@+id/zText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="TextView" android:visibility="invisible" />
+        android:text="TextView" />
 
     <TextView
         android:id="@+id/xDiffText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="TextView" android:visibility="invisible" />
+        android:text="TextView" />
 
     <TextView
         android:id="@+id/yDiffText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="TextView" android:visibility="invisible" />
+        android:text="TextView"  />
 
     <TextView
         android:id="@+id/zDiffText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="TextView" android:visibility="invisible" />
+        android:text="TextView" />
 
     <me.davidhu.intensishot.Panel
+        android:id="@+id/meterPanel"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
         
