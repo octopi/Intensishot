@@ -9,6 +9,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -58,14 +59,8 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 		mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
 		mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
-		/*meterImage = (ImageView) findViewById(R.id.meterImage);
-		meterImage.setImageDrawable(getResources().getDrawable(R.layout.meter));
-		
-		rotator = (RotateDrawable) getResources().getDrawable(R.drawable.needle);
-		rotator.setLevel(2);*/
 		
 		meterPanel = (Panel) findViewById(R.id.meterPanel);
-		
 		
 		zeroes = null;
 		
@@ -98,16 +93,17 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 				}.start();
 			}
 		});       
-		
-		startSensing();
 	}
 
 	private void startSensing() {
 		mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+		meterPanel.lightMeter();
 	}
 	
 	private void stopSensing() {
 		mSensorManager.unregisterListener(this);
+		meterPanel.dimMeter();
+		meterPanel.invalidate();
 	}
 
 	protected void onResume() {
@@ -144,7 +140,7 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 			yText.setText("y: "+String.valueOf(yDiff));
 			zText.setText("z: "+String.valueOf(zDiff));
 			
-			meterPanel.invalidate();
+			meterPanel.invalidate(); // tell the panel to draw itself again
 
 			if(xDiff > maxDiff[0]) {
 				maxDiff[0] = xDiff;
@@ -184,7 +180,7 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 			
 			@Override
 			public void onFinish() {
-				//stopSensing();
+				stopSensing();
 				float score = maxDiff[0]+maxDiff[1]+maxDiff[2];
 				countdownTimer.setText("Done! Your score is: "+score);
 			}
