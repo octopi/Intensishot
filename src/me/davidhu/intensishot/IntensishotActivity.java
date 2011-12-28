@@ -57,11 +57,13 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 		mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
 		mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
-		meterImage = (ImageView) findViewById(R.id.meterImage);
+		/*meterImage = (ImageView) findViewById(R.id.meterImage);
 		meterImage.setImageDrawable(getResources().getDrawable(R.layout.meter));
 		
 		rotator = (RotateDrawable) getResources().getDrawable(R.drawable.needle);
-		rotator.setLevel(2);
+		rotator.setLevel(2);*/
+		
+		
 		
 		zeroes = null;
 		

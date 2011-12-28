@@ -61,10 +61,11 @@
         android:gravity="center_horizontal"
         android:text="TextView" android:visibility="invisible" />
 
-    <ImageView
-        android:id="@+id/meterImage"
+    <me.davidhu.intensishot.Panel
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
+        
+    </me.davidhu.intensishot.Panel>
     
     <Button
         android:id="@+id/button"
