@@ -4,6 +4,9 @@
     <string name="hello">Hello World, IntensishotActivity!</string>
     <string name="app_name">Intensishot</string>
     <string name="button_label">Take some shots!</string>
+    <string name="instructions">
+          1. Lay phone flat\n2. Gather friends\n3. Take shots\n4. Slam glasses!</string>
+    <string name="dialog_button">Take some more!</string>
 
     <style name="ButtonText">
         <item name="android:layout_width">fill_parent</item>
