@@ -1,22 +1,15 @@
 package me.davidhu.intensishot;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.graphics.drawable.RotateDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -30,8 +23,6 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 
 	// UI components
 	private Button button;
-	private ImageView meterImage;
-	private RotateDrawable rotator; 
 	private Panel meterPanel;
 
 	private float[] zeroes; // original zeroed states of sensors
@@ -51,8 +42,6 @@ public class IntensishotActivity extends Activity implements SensorEventListener
 		setContentView(R.layout.main);
 
 		button = (Button) findViewById(R.id.button);
-		/*TextView instr = (TextView) findViewById(R.id.instructions);
-		instr.setBackgroundResource(R.color.black);*/
 
 		// initialize the sensors
 		mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);

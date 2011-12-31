@@ -24,7 +24,6 @@ class Panel extends View {
 	private Bitmap meterLit;
 	private Bitmap currMeter;
 	private Paint textPaint;
-	private int textSize;
 	private boolean countdown;
 	private int currCountdown;
 
@@ -43,7 +42,6 @@ class Panel extends View {
 		meterLit = BitmapFactory.decodeResource(getResources(), R.drawable.meter_lit);
 		
 		textPaint = new Paint();
-		textSize = 64;
 		textPaint.setColor(Color.WHITE);
 		textPaint.setTextSize(72);
 		textPaint.setAntiAlias(true);
